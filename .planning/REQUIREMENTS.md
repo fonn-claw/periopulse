@@ -103,13 +103,52 @@ Requirements for initial release. Each maps to roadmap phases.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (Populated during roadmap creation) | | |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| AUTH-04 | Phase 1 | Pending |
+| AUTH-05 | Phase 1 | Pending |
+| PAT-01 | Phase 1 | Pending |
+| PAT-02 | Phase 1 | Pending |
+| PAT-03 | Phase 1 | Pending |
+| CHART-01 | Phase 2 | Pending |
+| CHART-02 | Phase 2 | Pending |
+| CHART-03 | Phase 2 | Pending |
+| CHART-04 | Phase 2 | Pending |
+| CHART-05 | Phase 2 | Pending |
+| CHART-06 | Phase 2 | Pending |
+| CHART-07 | Phase 2 | Pending |
+| CHART-08 | Phase 2 | Pending |
+| CHART-09 | Phase 2 | Pending |
+| CHART-10 | Phase 2 | Pending |
+| NOTE-01 | Phase 3 | Pending |
+| NOTE-02 | Phase 3 | Pending |
+| NOTE-03 | Phase 3 | Pending |
+| NOTE-04 | Phase 3 | Pending |
+| NOTE-05 | Phase 3 | Pending |
+| TREAT-01 | Phase 3 | Pending |
+| TREAT-02 | Phase 3 | Pending |
+| TREAT-03 | Phase 3 | Pending |
+| TREAT-04 | Phase 3 | Pending |
+| PORTAL-01 | Phase 4 | Pending |
+| PORTAL-02 | Phase 4 | Pending |
+| PORTAL-03 | Phase 4 | Pending |
+| PORTAL-04 | Phase 4 | Pending |
+| DASH-01 | Phase 4 | Pending |
+| DASH-02 | Phase 4 | Pending |
+| DASH-03 | Phase 4 | Pending |
+| DASH-04 | Phase 4 | Pending |
+| DEMO-01 | Phase 4 | Pending |
+| DEMO-02 | Phase 4 | Pending |
+| DEMO-03 | Phase 4 | Pending |
+| DEMO-04 | Phase 4 | Pending |
+| DEMO-05 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 34 total
-- Mapped to phases: 0
-- Unmapped: 34 ⚠️
+- v1 requirements: 40 total
+- Mapped to phases: 40
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-24*
-*Last updated: 2026-03-24 after initial definition*
+*Last updated: 2026-03-24 after roadmap creation*
