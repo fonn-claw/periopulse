@@ -606,20 +606,26 @@ def _seed_data(cur):
 
             improvement = vi * 0.3 if condition > 0 and pi % 3 == 0 else 0
 
+            reading_vals = []
+            reading_params = []
             for tooth in range(1, 33):
                 for site in sites:
                     lo, hi = base_depths
                     depth = max(1, random.randint(lo, hi) - int(improvement))
                     recession = random.randint(0, 1) if condition >= 2 else 0
                     bop = random.random() < (0.1 + condition * 0.15)
-                    cur.execute("INSERT INTO perio_readings (chart_id, tooth_number, site, pocket_depth, recession, bleeding_on_probing, suppuration) VALUES (%s,%s,%s,%s,%s,%s,%s)",
-                                (chart_id, tooth, site, depth, recession, bop, False))
+                    reading_vals.append("(%s,%s,%s,%s,%s,%s,%s)")
+                    reading_params.extend([chart_id, tooth, site, depth, recession, bop, False])
+            cur.execute("INSERT INTO perio_readings (chart_id, tooth_number, site, pocket_depth, recession, bleeding_on_probing, suppuration) VALUES " + ",".join(reading_vals), reading_params)
 
+            finding_vals = []
+            finding_params = []
             for tooth in range(1, 33):
                 mob = random.randint(0, min(condition, 2)) if random.random() < 0.1 else 0
                 furc = random.randint(0, min(condition, 2)) if random.random() < 0.05 and tooth in [2,3,14,15,18,19,30,31] else 0
-                cur.execute("INSERT INTO tooth_findings (visit_id, tooth_number, mobility, furcation, missing, implant) VALUES (%s,%s,%s,%s,%s,%s)",
-                            (visit_id, tooth, mob, furc, False, False))
+                finding_vals.append("(%s,%s,%s,%s,%s,%s)")
+                finding_params.extend([visit_id, tooth, mob, furc, False, False])
+            cur.execute("INSERT INTO tooth_findings (visit_id, tooth_number, mobility, furcation, missing, implant) VALUES " + ",".join(finding_vals), finding_params)
 
             note_content = {
                 'perio_maintenance': f"Perio maintenance visit. Patient reports {'no concerns' if condition < 2 else 'some sensitivity in posterior teeth'}. Full mouth probing completed. {'Pockets within normal limits.' if condition == 0 else 'Elevated pocket depths noted in posterior regions.'} OHI reinforced.",
